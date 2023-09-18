@@ -31,7 +31,7 @@ Untuk mengganti halaman landing page default Laravel, ubah rute dalam file `rout
 
 ```php
 Route::get('/', [HomeController::class, 'showData']);
-
+```
 
 ## Langkah 4: Ringkasan Data Profesi
 1. Clone repositori ini.
