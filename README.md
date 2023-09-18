@@ -1,66 +1,33 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Simple Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambil data dari [API Random User](https://randomuser.me/api/), mengolah data, menyimpannya dalam tabel `hasil_response`, dan menampilkan ringkasan data profesi. Berikut adalah langkah-langkahnya:
 
-## About Laravel
+## Langkah 1: Membuat Project Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. Buat proyek Laravel versi 10.
+2. Buat class `RandomUser` untuk mengambil data dari [API Random User](https://randomuser.me/api/).
+3. Gunakan class `RandomUser` di dalam controller `HomeController`.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Langkah 2: Menyimpan Data ke Tabel `hasil_response`
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Buat tabel `hasil_response` dengan struktur kolom yang sesuai dengan ketentuan.
+2. Buat tabel `jenis_kelamin` dengan relasi 1 dan 2 yang berelasi dengan tabel `hasil_response`.
+3. Buat tabel `profesi` dengan kode dan nama profesi yang berelasi dengan tabel `hasil_response`.
+4. Di dalam controller `HomeController`, buat fungsi `fetchRandomUserData` untuk mengambil, mengolah, dan menyimpan data ke tabel `hasil_response`.
 
-## Learning Laravel
+## Langkah 3: Menampilkan Data
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Buat tampilan untuk menampilkan data dalam tabel.
+2. Di dalam controller `HomeController`, buat fungsi `showData` untuk menampilkan data dalam tabel sesuai dengan format yang diinginkan.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Langkah 4: Ringkasan Data Profesi
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Di dalam controller `HomeController`, buat fungsi `showProfessionSummary` untuk menghitung ringkasan data profesi dari tabel `hasil_response`.
+2. Tampilkan ringkasan data profesi di halaman tampilan.
 
-## Laravel Sponsors
+## Mengganti Default Landing Page
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Untuk mengganti halaman landing page default Laravel, ubah rute dalam file `routes/web.php` menjadi fungsi yang diinginkan. Contoh:
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```php
+Route::get('/', [HomeController::class, 'showData']);
