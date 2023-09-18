@@ -25,17 +25,30 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
 1. Di dalam controller `HomeController`, buat fungsi `showProfessionSummary` untuk menghitung ringkasan data profesi dari tabel `hasil_response`.
 2. Tampilkan ringkasan data profesi di halaman tampilan.
 
-## Mengganti Default Landing Page
 
-Untuk mengganti halaman landing page default Laravel, ubah rute dalam file `routes/web.php` menjadi fungsi yang diinginkan. Contoh:
+## Langkah Installasi
 
-```php
-Route::get('/', [HomeController::class, 'showData']);
+1. `Clone Repository`
+
+```bash
+git clone https://github.com/adrespranata/varnion
 ```
+2. Konfigurasi file .env untuk koneksi database.
 
-## Langkah 4: Ringkasan Data Profesi
-1. Clone repositori ini.
-2. Jalankan perintah composer install untuk menginstal dependensi.
-3. Konfigurasi file .env untuk koneksi database.
+3. `Sesuaikan database environment`
+    ```
+    DB_HOST=db / 127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=laravel
+    DB_USERNAME=username
+    DB_PASSWORD=
+    ```
 4. Jalankan migrasi dengan perintah php artisan migrate untuk membuat tabel yang diperlukan.
+```bash
+php artisan migrate:fresh --seed
+```
 5. Jalankan perintah php artisan serve untuk menjalankan aplikasi.
+
+```bash
+php artisan serve
+```
