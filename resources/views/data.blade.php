@@ -3,6 +3,8 @@
 @section('content')
 <div class="container">
     <h1>Data Hasil Response</h1>
+    <a href="{{ route('fetchRandomData') }}" class="btn btn-success mb-2">Ambil Data Baru</a>
+    <a href="{{ route('showProfessionSummary') }}" class="btn btn-primary mb-2">Lihat Ringkasan Profesi</a>
     <table class="table table-bordered">
         <thead>
             <tr>

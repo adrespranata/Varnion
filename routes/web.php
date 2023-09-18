@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'showData']);
+Route::get('/', [HomeController::class, 'showData'])->name('showData');
 
 // JSON
 Route::get('/fetch-random-user-data', [HomeController::class, 'fetchRandomUserData'])->name('fetchRandomUserData');
@@ -22,6 +22,7 @@ Route::get('/fetch-data-25-kali', [HomeController::class, 'FetchData25'])->name(
 Route::get('/ringkasan-profesi', [HomeController::class, 'professionSummary'])->name('professionSummary');
 
 // View
+Route::get('/fetch-random-data', [HomeController::class, 'fetchRandomData'])->name('fetchRandomData');
 Route::get('/ringkasan', [HomeController::class, 'showProfessionSummary'])->name('showProfessionSummary');
 
 

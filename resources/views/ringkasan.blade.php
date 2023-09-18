@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <h1>Ringkasan Data Profesi</h1>
+    <a href="{{ route('showData') }}" class="btn btn-primary mb-2">Random Data</a>
     <table class="table table-bordered">
         <thead>
             <tr>
