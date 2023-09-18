@@ -2,9 +2,17 @@
 
 @section('content')
 <div class="container">
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
     <h1>Data Hasil Response</h1>
-    <a href="{{ route('fetchRandomData') }}" class="btn btn-success mb-2">Ambil Data Baru</a>
-    <a href="{{ route('showProfessionSummary') }}" class="btn btn-primary mb-2">Lihat Ringkasan Profesi</a>
+
+    <a href="{{ route('fetchRandomData') }}" class="btn btn-primary mb-2">Ambil Data Baru</a>
+    <a href="{{ route('fetchRandomData25Kali') }}" class="btn btn-secondary mb-2">Ambil 25 Data Baru</a>
+    <a href="{{ route('showProfessionSummary') }}" class="btn btn-success mb-2">Lihat Ringkasan Profesi</a>
     <table class="table table-bordered">
         <thead>
             <tr>

@@ -23,6 +23,7 @@ Route::get('/ringkasan-profesi', [HomeController::class, 'professionSummary'])->
 
 // View
 Route::get('/fetch-random-data', [HomeController::class, 'fetchRandomData'])->name('fetchRandomData');
+Route::get('/fetch-random-data-25-kali', [HomeController::class, 'fetchRandomData25Kali'])->name('fetchRandomData25Kali');
 Route::get('/ringkasan', [HomeController::class, 'showProfessionSummary'])->name('showProfessionSummary');
 
 

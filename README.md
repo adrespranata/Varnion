@@ -54,3 +54,8 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
     ```bash
     php artisan serve
     ```
+## Hasil
+1. Menampilkan Semua Data
+    ![Alt Text](/images/showData.png)
+2. Menampilkan Ringkasan Profesi
+    ![Alt Text](/images/ringkasan.png)
