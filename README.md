@@ -32,7 +32,7 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
     ```bash
     git clone https://github.com/adrespranata/varnion
     ```
-2. Konfigurasi file .env untuk koneksi database.
+2. Copy file `.env.example` menjadi file `.env` untuk Konfigurasi koneksi antara database.
 
 3. Sesuaikan database environment
     ```
@@ -42,11 +42,11 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
     DB_USERNAME=username
     DB_PASSWORD=
     ```
-4. Jalankan migrasi dengan perintah php artisan migrate untuk membuat tabel yang diperlukan.
+4. Jalankan migrasi dengan perintah `php artisan migrate` untuk membuat tabel yang diperlukan.
     ```bash
     php artisan migrate:fresh --seed
     ```
-5. Jalankan perintah php artisan serve untuk menjalankan aplikasi.
+5. Jalankan perintah `php artisan serve` untuk menjalankan aplikasi.
     ```bash
     php artisan serve
     ```
