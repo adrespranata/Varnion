@@ -56,6 +56,6 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
     ```
 ## Hasil
 1. Menampilkan Semua Data
-    ![Alt Text](/images/showData.png)
+    ![Alt Text](/public/images/ringkasan.png)
 2. Menampilkan Ringkasan Profesi
     ![Alt Text](/images/ringkasan.png)
