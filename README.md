@@ -1,4 +1,4 @@
-# Laravel Simple Project
+# Pre-Test Backend Developer - Laravel 10*
 
 Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambil data dari [API Random User](https://randomuser.me/api/), mengolah data, menyimpannya dalam tabel `hasil_response`, dan menampilkan ringkasan data profesi. Berikut adalah langkah-langkahnya:
 
@@ -28,14 +28,14 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
 
 ## Langkah Installasi
 
-1. `Clone Repository`
+1. Clone Repository
 
 ```bash
 git clone https://github.com/adrespranata/varnion
 ```
 2. Konfigurasi file .env untuk koneksi database.
 
-3. `Sesuaikan database environment`
+3. Sesuaikan database environment
     ```
     DB_HOST=db / 127.0.0.1
     DB_PORT=3306
