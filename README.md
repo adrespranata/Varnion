@@ -29,10 +29,9 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
 ## Langkah Installasi
 
 1. Clone Repository
-
-```bash
-git clone https://github.com/adrespranata/varnion
-```
+    ```bash
+    git clone https://github.com/adrespranata/varnion
+    ```
 2. Konfigurasi file .env untuk koneksi database.
 
 3. Sesuaikan database environment
@@ -44,11 +43,10 @@ git clone https://github.com/adrespranata/varnion
     DB_PASSWORD=
     ```
 4. Jalankan migrasi dengan perintah php artisan migrate untuk membuat tabel yang diperlukan.
-```bash
-php artisan migrate:fresh --seed
-```
+    ```bash
+    php artisan migrate:fresh --seed
+    ```
 5. Jalankan perintah php artisan serve untuk menjalankan aplikasi.
-
-```bash
-php artisan serve
-```
+    ```bash
+    php artisan serve
+    ```
