@@ -58,4 +58,4 @@ Proyek Laravel sederhana ini mencakup penggunaan Laravel versi 10 untuk mengambi
 1. Menampilkan Semua Data
     ![Alt Text](/public/images/ringkasan.png)
 2. Menampilkan Ringkasan Profesi
-    ![Alt Text](/images/ringkasan.png)
+    ![Alt Text](/public/images/ringkasan.png)
